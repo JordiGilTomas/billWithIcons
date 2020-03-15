@@ -1,8 +1,5 @@
 import model from '../model/model.js';
 
-const main = async (req, res) => {
-  const productos = await model.getAllProducts();
-  res.send(JSON.stringify(productos));
+export const renderMain = async (req, res) => {
+  res.render('bill');
 };
-
-export default { main };

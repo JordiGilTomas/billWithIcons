@@ -1,0 +1,79 @@
+<div class="containerBill">
+
+    <div class="invoiceData">
+        <p>INVOICE #{{invoice}}</p>
+        <p><span class="gradient">o</span>Issue Date <span>{{issueDate}}</span></p>
+        <p><span class="gradient">o</span>Due Date <span>{{dueDate}}</span></p>
+        <p><span class="gradient">o</span>Net <span>{{net}}</span></p>
+        <p><span class="gradient">o</span>Currency <span>{{currency}}</span></p>
+        <p><span class="gradient">o</span>P.O.# <span>{{postOfficeNumber}}</span></p>
+    </div>
+
+    <div class="billTo">
+        <p>BILL TO:</p>
+        <p class="bold">Slate Rock and Gravel Company{{name}}</p>
+        <p>222 Rocky Way{{street}}</p>
+        <p>30000 Bedrock, Cobblestone Country{{country}}</p>
+        <p>+555 7 123-5555{{phone}}</p>
+        <p>fred@slaterockgavel.red{{email}}</p>
+        <p>Attn: Fred Flinstone{{attn}}</p>
+    </div>
+
+    <table class="tableItems">
+        <thead>
+            <tr>
+                <th>ITEM</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+                <th>DISCOUNT</th>
+                <th>TAX</th>
+                <th>LINE TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Frozen Brontosaurus Ribs</td>
+                <td>2</td>
+                <td>120</td>
+                <td>-10%</td>
+                <td>2%</td>
+                <td>240.00</td>
+            </tr>
+               <tr>
+                <td>Mammoth Chops</td>
+                <td>14</td>
+                <td>175</td>
+                <td>-5%</td>
+                <td>5%</td>
+                <td>2.205.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="tableAmount">
+        <tr>
+            <th>Subtotal</th>
+            <td>$2.445.00</td>
+        </tr>
+        <tr>
+            <th>Tax 1</th>
+            <td>(2%) $4.80</td>
+        </tr>
+        <tr>
+            <th>Tax 2</th>
+            <td>(5%) $110.25</td>
+        </tr>
+        <tr>
+            <th>TOTAL</th>
+            <td>$2.560.05</td>
+        </tr>
+        <tr>
+            <th>Paid</th>
+            <td>0.00</td>
+        </tr>
+        <tr>
+            <th>AMOUNT DUE</th>
+            <td>$2.560.05</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+:root {
+    --main-color: #883526;
+    --side-color: #D0C8B5;
+    --letter-color: #ccc;
+    --mainLetter-color: rgb(134, 98, 74);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 5%;
+    height: 100vh;
+    max-width: 1280px;
+}
+
+ .header {
+    background-color: var(--main-color);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 1em 1.5em 2em;
+}
+
+ .header h1, h2 {
+    text-align: right;
+}
+
+ .header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+ .header h2 {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+
+ .header span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0;
+}
+
+.containerMain {
+    display: flex;
+}
+
+.sideTitle {
+    background-color: var(--side-color);
+    width: 10rem;
+    padding: 3em 0;
+    float: left;
+    height: 60em;
+}
+
+.sideTitle h1 {
+    writing-mode: vertical-lr;
+    color: #F9F9F9;
+    font-size: 10em;
+    width: fit-content;
+    line-height: 1.28em;
+    transform: rotate(180deg);
+    margin-top: 0.25em;
+    text-align: right;
+}
+
+.invoiceData, .billTo {
+    height: 12rem;
+    margin: 4rem 2rem;
+    font-size: 0.9rem;
+}
+
+.gradient {
+    color: transparent;
+    background: linear-gradient(green, lightgreen);
+    margin-left: -1.25em;
+    margin-right: 0.5em;
+    vertical-align: center;
+    height: fit-content;
+    width: fit-content;
+    line-height: 0.8em;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.invoiceData p:first-child, .billTo p:first-child {
+    color: var(--mainLetter-color);
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.containerBill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    background-color: lightblue;
+}
+
+.invoiceData p:not(:first-child)  {
+    margin-left: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.billTo .bold ~ p {
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.bold {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.tableItems {
+    padding-left: 2em;
+    border-spacing: 0;
+    text-align: right;
+    font-size: 1em;
+    width: 100%;
+    table-layout: auto;
+}
+
+.tableItems th{
+    background-color: var(--main-color);
+    color: var(--letter-color);
+    text-align: center;
+    padding: 0.75em 0em;
+}
+
+.tableItems th:first-child{
+    width: 50%;
+}
+
+.tableItems td {
+    padding: 1em 0em;
+}
+
+.tableItems td:first-child{
+
+    position: relative;
+    text-align: left;
+    padding-left: 1em;
+
+}
+
+.tableItems td:first-child::before{
+    position: absolute;
+    content: "·";
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 0.5em;
+    left: 0;
+}
+
+.tableItems td {
+    border-bottom: 1px solid black;
+    min-width: 105px;
+    text-align: center;
+}
+
+.tableItems th:last-child {
+    padding-right: 0.5em;
+}
+
+.tableAmount {
+    margin-top: 2em;
+    margin-left: auto;
+    border-spacing: 0;
+}
+
+.tableAmount td {
+    text-align: right;
+    padding-right: 0.5em;
+
+}
+
+.tableAmount th {
+    text-align: left;
+    padding-right: 10em;
+}
+
+.tableAmount th, .tableAmount td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.tableAmount tr:last-child {
+    background-color: var(--main-color);
+    color: rgb(228, 226, 226);
+    font-weight: 700;
+}
+
+.tableAmount tr:not(:last-child) th {
+    padding-left: 1em;
+    padding-right: 10em;
+}
+
+.tableAmount tr:last-child th {
+    padding-left: 1em;
+}
+
+footer {
+    font-size: 0.9rem;
+    margin-top: 5em;
+    text-align: center;
+}
+footer p:first-child {
+    color: var(--mainLetter-color);
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+footer p:not(:first-child):not(:last-child)  {
+    font-weight: 500;
+}
+
+footer p:last-child{
+    margin-top: 0.5em;
+    font-weight: 400;
+    margin-bottom: 2em;
+
+}
+
+footer span {
+    display: inline-block;
+    font-size: 3em;
+    transform: translateY(0.155em);
+    padding: 0 .1em
+}
