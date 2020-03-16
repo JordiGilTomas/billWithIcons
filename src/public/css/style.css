@@ -16,9 +16,31 @@
 
 body {
     margin: 0 auto;
-    padding: 0 5%;
     height: 100vh;
     max-width: 1280px;
+    display: grid;
+    grid-template-columns: 10em 4fr;
+    grid-template-rows: auto 5fr auto;
+    grid-template-areas:
+        "header header"
+        "side   main"
+        "side   footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sideTitle {
+    grid-area: side;
+}
+
+.mainBody {
+    grid-area: main;
+}
+
+.mainFooter {
+    grid-area: footer;
 }
 
  .header {
@@ -49,16 +71,8 @@ body {
     padding: 0;
 }
 
-.containerMain {
-    display: flex;
-}
-
 .sideTitle {
     background-color: var(--side-color);
-    width: 10rem;
-    padding: 3em 0;
-    float: left;
-    height: 60em;
 }
 
 .sideTitle h1 {
@@ -152,7 +166,6 @@ body {
 }
 
 .tableItems td:first-child{
-
     position: relative;
     text-align: left;
     padding-left: 1em;
@@ -187,7 +200,6 @@ body {
 .tableAmount td {
     text-align: right;
     padding-right: 0.5em;
-
 }
 
 .tableAmount th {
@@ -215,30 +227,30 @@ body {
     padding-left: 1em;
 }
 
-footer {
+.footer {
     font-size: 0.9rem;
-    margin-top: 5em;
     text-align: center;
+    margin-top: 5em;
 }
-footer p:first-child {
+
+.footer p:first-child {
     color: var(--mainLetter-color);
     font-weight: 700;
     margin-bottom: 1.5em;
     font-size: 1.1em;
 }
 
-footer p:not(:first-child):not(:last-child)  {
+.footer p:not(:first-child):not(:last-child)  {
     font-weight: 500;
 }
 
-footer p:last-child{
+.footer p:last-child{
     margin-top: 0.5em;
     font-weight: 400;
-    margin-bottom: 2em;
-
+    margin-bottom: 3em;
 }
 
-footer span {
+.footer span {
     display: inline-block;
     font-size: 3em;
     transform: translateY(0.155em);

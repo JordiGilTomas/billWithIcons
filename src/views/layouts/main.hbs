@@ -9,14 +9,11 @@
 </head>
 
 <body>
-    {{>nav}}
-        {{>sideTitle}}
-    <div class="containerMain">
+    <div class="header"> {{>header}}</div>
+    <div class="sideTitle"> {{>sideTitle}}</div>
+    <div class="mainBody">{{{body}}}</div>
+    <div class="footer">{{>footer}}</div>
 
-        {{{body}}}
-
-    </div>
-    {{>footer}}
     <script id="__bs_script__">//<![CDATA[
         document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
 //]]></script>
