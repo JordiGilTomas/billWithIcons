@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 
+@font-face {
+    font-family: "Food Icons";
+    src: url("./food-font/Food-DaE.ttf");
+}
+
 :root {
     --main-color: #883526;
     --side-color: #D0C8B5;
@@ -16,11 +21,12 @@
 
 body {
     margin: 0 auto;
-    height: 100vh;
     max-width: 1280px;
+    min-width: 980px;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 10em 4fr;
-    grid-template-rows: auto 5fr auto;
+    grid-template-columns: 10em auto;
+    grid-template-rows: 10em auto 10em;
     grid-template-areas:
         "header header"
         "side   main"
@@ -73,6 +79,11 @@ body {
 
 .sideTitle {
     background-color: var(--side-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+
 }
 
 .sideTitle h1 {
@@ -80,10 +91,10 @@ body {
     color: #F9F9F9;
     font-size: 10em;
     width: fit-content;
-    line-height: 1.28em;
+    line-height: 1.282em;
     transform: rotate(180deg);
     margin-top: 0.25em;
-    text-align: right;
+
 }
 
 .invoiceData, .billTo {
@@ -194,6 +205,7 @@ body {
 .tableAmount {
     margin-top: 2em;
     margin-left: auto;
+    margin-bottom: 5em;
     border-spacing: 0;
 }
 
@@ -230,7 +242,6 @@ body {
 .footer {
     font-size: 0.9rem;
     text-align: center;
-    margin-top: 5em;
 }
 
 .footer p:first-child {
@@ -247,7 +258,6 @@ body {
 .footer p:last-child{
     margin-top: 0.5em;
     font-weight: 400;
-    margin-bottom: 3em;
 }
 
 .footer span {
@@ -255,4 +265,93 @@ body {
     font-size: 3em;
     transform: translateY(0.155em);
     padding: 0 .1em
+}
+
+.indexContainer {
+     height:  100%;
+}
+
+.indexContainer input {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 2em;
+    height: 1.5em;
+    padding: 1em 1em;
+    width: 50%;
+    margin: 2em auto 0em;
+}
+.tableProductos {
+    margin: 2em auto 2em auto;
+    border-spacing: 0;
+    width: 90%;
+}
+
+.tableProductos thead {
+    box-shadow: 0 1px 10px #000000;
+}
+.tableProductos thead th:nth-child(2) {
+    width: 100%;
+}
+
+.tableProductos thead th:nth-child(3) {
+
+
+
+}
+.tableProductos tbody:before {
+    line-height:1em;
+    color: transparent;
+    content:"-";
+    display:block;
+}
+
+
+.tableProductos th {
+    background-color: var(--main-color);
+    line-height: 3em;
+    color: var(--letter-color);
+    padding: 0 2em;
+}
+
+.tableProductos tbody tr:first-child td{
+
+    margin-top: 1em solid black;
+}
+
+.tableProductos td {
+    height:  2em;
+}
+
+.tableProductos td:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    line-height: 2.3em;
+    min-width: 400px;
+    height: 2.3em
+}
+.tableProductos td:not(:nth-child(2)) {
+    text-align: center;
+}
+
+.tableProductos td:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+button {
+    margin-right: 1em;
+    margin-top: 0.6em;
+    padding: 3em;
+    background-image: url("../icons/addButton.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+}
+.tableProductos .tipo img {
+    max-height: 100%;
+}
+
+.hidden {
+    display: none;
 }

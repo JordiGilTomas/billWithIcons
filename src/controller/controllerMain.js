@@ -1,5 +1,8 @@
 import model from '../model/model.js';
 
-export const renderMain = async (req, res) => {
-  res.render('bill');
+export const renderIndex = async (req, res) => {
+  const productos = await model.getAllProducts();
+  res.render('index', { productos });
 };
+
+export const renderBill = () => null;

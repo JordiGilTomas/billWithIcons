@@ -1,5 +1,13 @@
 bocetos
 
+.gitignore
+
+*.png
+*.jpg
+*.svg
+
+
+
 # Logs
 logs
 *.log

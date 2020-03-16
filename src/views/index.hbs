@@ -1,0 +1,26 @@
+<div class="indexContainer">
+<input type="text" name="nombre" id="nombreInput" placeholder="Buscar producto. teclea * para verlos todos">
+<table class="tableProductos" id="tableProductos">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+         {{#each productos}}
+            <tr class="hidden">
+                <td class="tipo"><img src="icons/{{tipo}}.png" alt=""></td>
+                <td>{{nombre}}<button></button> </td>
+                <td>{{precio}} €</td>
+                <td>{{stock}}</td>
+            </tr>
+    {{/each}}
+    </tbody>
+
+</table>
+
+</div>
+<script src="js/main.js"></script>
