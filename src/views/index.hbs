@@ -1,4 +1,57 @@
 <div class="indexContainer">
+
+<div class="divCart">
+    <img class="cart" src="icons/cart.png" alt="carrito">
+    <label class="divCart-cartCantidad" id="cartCantidad">0</label>
+
+    <div class="itemsInCart">
+        <p class="itemsInCart-title">Tu Carrito</p>
+        <div class="itemsInCart-item">
+             <img src="icons/Frescos.png" alt="" srcset="" width="10%">
+             <span class="itemsInCart-item-nombre">Pera Conferencia</span>
+             <div class="itemsInCart-item-divArrows">
+                 <p class="itemsInCart-item-upArrow">V</p>
+                 <span class="itemsInCart-item-amount">3</span>
+                 <p class="itemsInCart-item-downArrow">V</p>
+             </div>
+             <span class="itemsInCart-item-close">X</span>
+        </div>
+        <div class="itemsInCart-item">
+             <img src="icons/Mascotas.png" alt="" srcset="" width="10%">
+             <span class="itemsInCart-item-nombre">Alimento para perros</span>
+             <div class="itemsInCart-item-divArrows">
+                 <p class="itemsInCart-item-upArrow">V</p>
+                 <span class="itemsInCart-item-amount">6</span>
+                 <p class="itemsInCart-item-downArrow">V</p>
+             </div>
+             <span class="itemsInCart-item-close">X</span>
+        </div>
+        <div class="itemsInCart-item">
+             <img src="icons/Limpieza.png" alt="" srcset="" width="10%">
+             <span class="itemsInCart-item-nombre">Papel higiénico</span>
+             <div class="itemsInCart-item-divArrows">
+                 <p class="itemsInCart-item-upArrow">V</p>
+                 <span class="itemsInCart-item-amount">2</span>
+                 <p class="itemsInCart-item-downArrow">V</p>
+             </div>
+             <span class="itemsInCart-item-close">X</span>
+        </div>
+        <div class="itemsInCart-item">
+             <img src="icons/Frescos.png" alt="" srcset="" width="10%">
+             <span class="itemsInCart-item-nombre">Kiwi</span>
+             <div class="itemsInCart-item-divArrows">
+                 <p class="itemsInCart-item-upArrow">V</p>
+                 <span class="itemsInCart-item-amount">10</span>
+                 <p class="itemsInCart-item-downArrow">V</p>
+             </div>
+             <span class="itemsInCart-item-close">X</span>
+        </div>
+
+        <p class="itemsInCart-total">Total: <span class="total">25,50 €</span></p>
+        <button class="itemsInCart-button-clear">CLEAR CART</button>
+    </div>
+
+</div>
 <input type="text" name="nombre" id="nombreInput" placeholder="Buscar producto. teclea * para verlos todos">
 <table class="tableProductos" id="tableProductos">
     <thead>
@@ -13,7 +66,7 @@
          {{#each productos}}
             <tr class="hidden">
                 <td class="tipo"><img src="icons/{{tipo}}.png" alt=""></td>
-                <td>{{nombre}}<button></button> </td>
+                <td>{{nombre}}<button id={{id_producto}}></button></td>
                 <td>{{precio}} €</td>
                 <td>{{stock}}</td>
             </tr>
